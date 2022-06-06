@@ -1,0 +1,19 @@
+.lc-zoom-out, .lc-zoom-in {
+    display: none !important;
+}
+
+.lc-color-pickers .color-well:last-child {
+    display: none !important;
+}
+
+.hover-circle {
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+    border: 1px solid #333;
+    pointer-events: none;
+}
+
+.receiver .lc-picker, .receiver .lc-options {
+    display: none;
+}
