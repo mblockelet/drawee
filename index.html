@@ -5,12 +5,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/static/js/react-with-addons.js"></script>
     <script src="/static/js/literallycanvas.js"></script>
+    <script src="/static/js/chat.js"></script>
+    <script src="/static/js/communication.js"></script>
+    <script src="/static/js/drawing.js"></script>
+    <script src="/static/js/game.js"></script>
+    <script src="/static/js/lobby.js"></script>
+    <script src="/static/js/wordselect.js"></script>
   </head>
   <body>
-    <div class="my-drawing" style="height: 400px;"></div>
-    <div style="height: 16px;"></div>
-    <div class="receiver" style="height: 400px;"></div>
-    <div class="hover-circle"></div>
-    <script src="/static/js/drawee.js"></script>
+    <div class="layout layout-start">
+      <h1>Welcome to Sketchee!</h1>
+      <p>Enter your name:</p>
+      <input type="text" id="name" placeholder="Name">
+      <button id="join" onclick="joinSession();">Join</button>
+    </div>
+    <div class="layout layout-lobby" style="display: none;">
+      <h1>Imagine making a proper lobby</h1>
+      <p>Players :</p>
+      <ul class="players">
+      </ul>
+      <button id="start" onclick="startSession();">Start</button>
+    </div>
+    <div class="layout layout-drawing" style="display: none;">
+      <div class="drawing-area" style="height: 400px;"></div>
+      <div class="hover-circle"></div>
+      <div class="word-selector">
+        <div class="choosing-other">
+          <span class="choosing-player"></span> is choosing a word...
+        </div>
+        <div class="choosing-self">
+          Choose : <div class="words"></div>
+        </div>
+      </div>
+      <div class="chat-area"></div>
+      <div class="chat-input-area">
+        <form onsubmit="return sendChat();" action="#">
+          <input type="text" class="chat-input" placeholder="Type your guess...">
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
   </body>
 </html>

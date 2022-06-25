@@ -17,3 +17,10 @@
 .receiver .lc-picker, .receiver .lc-options {
     display: none;
 }
+.receiver {
+    pointer-events: none;
+}
+
+.chat-area {
+    border: 1px solid grey;
+}
